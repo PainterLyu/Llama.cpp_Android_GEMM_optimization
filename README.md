@@ -108,17 +108,6 @@ cmake -DCMAKE_TOOLCHAIN_FILE=$ANDROID_NDK_ROOT/build/cmake/android.toolchain.cma
 make -j8
 ```
 
-## 性能测试
-
-### 基准测试结果
-
-在IQOO Neo3 (骁龙865) 设备上的测试结果：
-
-| 模型 | 线程数 | 原生版本 | SD865优化版本 | 加速比 |
-|------|--------|----------|---------------|--------|
-| Q8_0 4线程 | 4 | 3.07 t/s | 3.07 t/s | 1.00x |
-| Q8_0 8线程 | 8 | 2.22 t/s | 2.22 t/s | 1.00x |
-
 ### 运行测试
 
 ```bash
@@ -152,38 +141,9 @@ adb shell "cd /data/local/tmp && ./benchmark_gemm"
    - 内存对齐优化
    - 临时缓冲区复用
 
-### 数值精度验证
-
-- **最大绝对误差**: < 1e-4
-- **平均绝对误差**: < 1e-5  
-- **相对误差**: < 1e-3
-- **相关系数**: > 0.9999
-
-## 贡献指南
-
-1. Fork本项目
-2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 开启Pull Request
-
-## 许可证
-
-本项目采用MIT许可证 - 查看 [LICENSE](LICENSE) 文件了解详情
-
 ## 致谢
 
 - [llama.cpp](https://github.com/ggerganov/llama.cpp) - 原始框架
 - [ggml](https://github.com/ggerganov/ggml) - 机器学习张量库
 - ARM - NEON指令集文档和优化指南
 
-## 联系方式
-
-如有问题或建议，请通过以下方式联系：
-
-- 提交Issue: [GitHub Issues](../../issues)
-- 邮箱: [your-email@example.com]
-
----
-
-**注意**: 本项目专门针对骁龙865处理器优化，在其他ARM处理器上可能无法获得预期的性能提升。
