@@ -1,0 +1,54 @@
+# Build directories
+build/
+build-*/
+cmake-build-*/
+
+# Compiled binaries
+*.o
+*.a
+*.so
+*.exe
+*.out
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+!CMakeLists.txt
+
+# Android specific
+*.apk
+*.ap_
+*.dex
+local.properties
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS specific
+.DS_Store
+Thumbs.db
+*.tmp
+*.temp
+
+# Test data and models
+*.gguf
+*.bin
+*.model
+test_data/
+
+# Performance logs
+*.log
+perf.data*
+*.prof
+
+# Backup files
+*.bak
+*.backup
+*~
